@@ -4,7 +4,7 @@
  * @copyright Copyright 2003-2016 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: easypopulate_4.php 2016-03-26 20:19:14 webchills $
+ * @version $Id: easypopulate_4.php 2016-03-27 10:19:14 webchills $
 */
 
 // $display_output defines
@@ -81,18 +81,18 @@ define('ORDERS_EP_DESC', 'Prefix: %1$s. %2$s will not be processed for import.')
 define('CATCHALL_EP_DESC', 'This contains any other file. %2$s will be processed like the upload of a full data file.');
 // error log defines - for ep_debug_log.txt
 define('EASYPOPULATE_4_ERRORLOG_SQL_ERROR', 'MySQL FEHLER %s: %s\nBei der Ausführung von:\n%sn');
-define('EASYPOPULATE_4_REMOVE_SETTINGS', 'Un-Install EP4');
-define('EASYPOPULATE_4_CONFIG_SETTINGS', 'Configuration Settings');
-define('EASYPOPULATE_4_CONFIG_UPLOAD', 'Upload Directory: ');
-define('EASYPOPULATE_4_DISPLAY_SPLIT_SHORT', 'Split Records: ');
-define('EASYPOPULATE_4_DISPLAY_EXEC_TIME', 'Execution Time: ');
-define('EASYPOPULATE_4_DISPLAY_ENABLE_META', 'Enable Products Metatags: ');
-define('EASYPOPULATE_4_DISPLAY_ENABLE_MUSIC', 'Enable Products Music: ');
-define('EASYPOPULATE_4_DISPLAY_CUSTOM_PRODUCT_FIELDS', 'Custom Products Fields');
-define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_SHORT_DESC', 'Product Short Descriptions: ');
+define('EASYPOPULATE_4_REMOVE_SETTINGS', 'Easy Populate deinstallieren');
+define('EASYPOPULATE_4_CONFIG_SETTINGS', 'Konfigurationseinstellungen');
+define('EASYPOPULATE_4_CONFIG_UPLOAD', 'Upload Verzeichnis: ');
+define('EASYPOPULATE_4_DISPLAY_SPLIT_SHORT', 'Einträage splitten: ');
+define('EASYPOPULATE_4_DISPLAY_EXEC_TIME', 'Ausführungszeit: ');
+define('EASYPOPULATE_4_DISPLAY_ENABLE_META', 'Artikel Metatags aktivieren: ');
+define('EASYPOPULATE_4_DISPLAY_ENABLE_MUSIC', 'Artikeltyp Musik aktivieren: ');
+define('EASYPOPULATE_4_DISPLAY_CUSTOM_PRODUCT_FIELDS', 'Benutzerdefinierte Artikelfelder');
+define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_SHORT_DESC', 'Artikel Kurzbeschreibung: ');
 define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_UNIT_MEAS', 'Product Unit of Measure: ');
-define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_UPC', 'Product UPC Code: ');
-define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_GOOGLE_CAT', 'Google Product Category: ');
+define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_UPC', 'UPC Code: ');
+define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_GOOGLE_CAT', 'Google Produktkategorie: ');
 define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_MSRP', 'Manufacturer\'s Suggested Retail Price: ');
 define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_MAP', 'Manufacturer\'s Advertised Price: ');
 define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_GP', 'Group Pricing Per Item: ');
@@ -101,14 +101,14 @@ define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_SBA', 'Stock By Attributes Mod: ')
 define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_CEON', 'CEON URI Rewriter Mod: ');
 define('EASYPOPULATE_4_DISPLAY_STATUS_PRODUCT_DPM', 'Dual Pricing Mod: ');
 define('EASYPOPULATE_4_DISPLAY_USER_DEF_FIELDS', 'User Defined Products Fields: ');
-define('EASYPOPULATE_4_DISPLAY_INSTALLED_LANG', 'Installed Languages');
-define('EASYPOPULATE_4_DISPLAY_INSTALLED_LANG_DEF', 'Default Language: ');
+define('EASYPOPULATE_4_DISPLAY_INSTALLED_LANG', 'Installierte Sprachen');
+define('EASYPOPULATE_4_DISPLAY_INSTALLED_LANG_DEF', 'Default Sprache: ');
 define('EASYPOPULATE_4_DISPLAY_INT_CHAR_ENC', 'Internal Character Encoding: ');
 define('EASYPOPULATE_4_DISPLAY_DB_COLL', 'DB Collation: ');
-define('EASYPOPULATE_4_DISPLAY_DB_FLD_LGTH', 'Database Field Lengths');
-define('EASYPOPULATE_4_DISPLAY_TITLE_UPLOAD', 'Upload EP File');
+define('EASYPOPULATE_4_DISPLAY_DB_FLD_LGTH', 'Datenbank Feldlängen');
+define('EASYPOPULATE_4_DISPLAY_TITLE_UPLOAD', 'Upload EP Datei');
 define('EASYPOPULATE_4_DISPLAY_MAX_UP_SIZE', 'Http Max Upload File Size: %1$d bytes (%2$d Mbytes)');
-define('EASYPOPULATE_4_DISPLAY_UPLOAD_BUTTON_TEXT', 'Upload File');
+define('EASYPOPULATE_4_DISPLAY_UPLOAD_BUTTON_TEXT', 'Datei hochladen');
 define('EASYPOPULATE_4_DD_STATUS_DEFAULT', 'Status');
 define('EASYPOPULATE_4_DD_STATUS_ACTIVE', 'aktiv');
 define('EASYPOPULATE_4_DD_STATUS_INACTIVE', 'inaktiv');
@@ -127,10 +127,10 @@ define('EASYPOPULATE_4_DISPLAY_EXPORT_FILE_IMPORT_SYNC', 'Import w/Sync');
 define('EASYPOPULATE_4_DISPLAY_EXPORT_FILE_IMPORT', 'Import');
 define('EASYPOPULATE_4_DISPLAY_EXPORT_FILE_DELETE', 'Datei löschen');
 define('EASYPOPULATE_4_DISPLAY_EXPORT_FILE_DOWNLOAD', 'Download');
-define('EASYPOPULATE_4_DISPLAY_EXPORT_FILE_NONE_SUPPORTED', '<b>No Supported Data Files</b>');
-define('EASYPOPULATE_4_DISPLAY_EXPORT_FILE_ERROR_FOLDER_OPEN', '<b>Error Opening Upload Directory:</b>');
+define('EASYPOPULATE_4_DISPLAY_EXPORT_FILE_NONE_SUPPORTED', '<b>keine unterstützten Dateien vorhanden</b>');
+define('EASYPOPULATE_4_DISPLAY_EXPORT_FILE_ERROR_FOLDER_OPEN', '<b>Fehler beim Öffnen des Upload Verzeichnisses:</b>');
 
-define('EASYPOPULATE_4_DISPLAY_EXPORT_TYPE_ERROR','error: no export type set - press backspace to return.');
+define('EASYPOPULATE_4_DISPLAY_EXPORT_TYPE_ERROR','Fehler: Exporttyp nicht festgelegt - drücken Sie die Backspace Taste um zurückzukehren');
 
 define('EASYPOPULATE_4_DISPLAY_EXPORT_TABLE_TITLE_FILENAME', 'Dateiname');
 define('EASYPOPULATE_4_DISPLAY_EXPORT_TABLE_TITLE_SIZE', 'Größe');
@@ -141,19 +141,19 @@ define('EASYPOPULATE_4_DISPLAY_EXPORT_TABLE_TITLE_IMPORT', 'Import');
 define('EASYPOPULATE_4_DISPLAY_EXPORT_TABLE_TITLE_DELETE', 'Löschen');
 define('EASYPOPULATE_4_DISPLAY_EXPORT_TABLE_TITLE_DOWNLOAD', 'Download');
 
-define('EASYPOPULATE_4_DISPLAY_EXPORT_RESULTS_TITLE','<br><u><h3>Export Results</h3></u><br>');
-define('EASYPOPULATE_4_DISPLAY_EXPORT_RESULTS_NUM_RECORDS','<br>Records Exported: %d<br>');
+define('EASYPOPULATE_4_DISPLAY_EXPORT_RESULTS_TITLE','<br><u><h3>Export Ergebnisse</h3></u><br>');
+define('EASYPOPULATE_4_DISPLAY_EXPORT_RESULTS_NUM_RECORDS','<br>Exportierte Einträge: %d<br>');
 define('EASYPOPULATE_4_DISPLAY_EXPORT_RESULTS_MEM_USE','<br>Memory Usage: %d');
 define('EASYPOPULATE_4_DISPLAY_EXPORT_RESULTS_MEM_PEAK','<br>Memory Peak: %d');
-define('EASYPOPULATE_4_DISPLAY_EXPORT_RESULTS_EXEC_TIME','<br>Execution Time: %d seconds.');
+define('EASYPOPULATE_4_DISPLAY_EXPORT_RESULTS_EXEC_TIME','<br>Execution Time: %d Sekunden.');
 
 define('EASYPOPULATE_4_DISPLAY_IMPORT_RESULTS_TITLE','<h3>Finished Processing Import File</h3>');
-define('EASYPOPULATE_4_DISPLAY_IMPORT_RESULTS_NUM_RECORDS_UPDATE','<br/>Updated records: %d');
+define('EASYPOPULATE_4_DISPLAY_IMPORT_RESULTS_NUM_RECORDS_UPDATE','<br/>Aktualisierte Einträge: %d');
 define('EASYPOPULATE_4_DISPLAY_IMPORT_RESULTS_NUM_RECORDS_IMPORT','<br/>New Imported records: %d');
-define('EASYPOPULATE_4_DISPLAY_IMPORT_RESULTS_NUM_ERRORS','<br/>Errors Detected: %d');
-define('EASYPOPULATE_4_DISPLAY_IMPORT_RESULTS_NUM_WARNINGS','<br/>Warnings Detected: %d');
+define('EASYPOPULATE_4_DISPLAY_IMPORT_RESULTS_NUM_ERRORS','<br/>Festgestellte Fehler: %d');
+define('EASYPOPULATE_4_DISPLAY_IMPORT_RESULTS_NUM_WARNINGS','<br/>Festgestellte Warnungen: %d');
 define('EASYPOPULATE_4_DISPLAY_IMPORT_RESULTS_MEM_USE','<br/>Memory Usage: %d');
 define('EASYPOPULATE_4_DISPLAY_IMPORT_RESULTS_MEM_PEAK','<br/>Memory Peak: %d');
 define('EASYPOPULATE_4_DISPLAY_IMPORT_RESULTS_EXEC_TIME','<br/>Execution Time: %d seconds.');
 define('EASYPOPULATE_4_DISPLAY_IMPORT_COMPLETE_ISSUES','File Import Completed with issues.');
-define('EASYPOPULATE_4_DISPLAY_IMPORT_COMPLETE','File Import Completed.');
+define('EASYPOPULATE_4_DISPLAY_IMPORT_COMPLETE','Datei Import abgeschlossen.');
